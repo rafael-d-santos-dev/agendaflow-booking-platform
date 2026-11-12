@@ -4,11 +4,9 @@ A modern, multi-industry appointment booking platform demo built with React, Typ
 
 AgendaFlow demonstrates how a single application can support different business models through configurable booking rules, an interactive customer portal, and an integrated administrative dashboard.
 
-The project combines a complete seven-step booking experience with business management tools, a dynamic availability engine, and locally persisted data.
-
 «Project type: Portfolio project / Interactive demonstration
 Status: Ready for portfolio presentation
-Architecture: Frontend-only SPA»
+Architecture: Frontend-only Single Page Application (SPA)»
 
 ---
 
@@ -51,7 +49,7 @@ A guided seven-step booking workflow:
 1. Service Selection — Browse available services and their details.
 2. Professional or Resource Selection — Choose a qualified specialist, available option, or required resource.
 3. Date Selection — Browse available booking dates.
-4. Time Selection — Choose from dynamically generated available slots.
+4. Time Selection — Choose dynamically generated available slots.
 5. Customer Details — Enter contact information with input validation.
 6. Booking Review — Review booking details and applicable policies.
 7. Confirmation Receipt — Receive a confirmation code and booking summary.
@@ -130,7 +128,7 @@ The design system is shared across the application while allowing each business 
 Project Architecture
 
 The codebase separates domain logic, persistence, routing, and interface components.
-'''text
+
 src/
 ├── components/
 │   ├── admin/
@@ -152,8 +150,8 @@ src/
 ├── types/
 │   └── index.ts
 └── App.tsx
-'''
-The structure above highlights the main architectural areas; supporting files and components are omitted.
+
+This is a simplified overview of the main project structure. Supporting files and components are omitted.
 
 ---
 
@@ -161,37 +159,39 @@ Getting Started
 
 Prerequisites
 
+Make sure you have the following installed:
+
 - Node.js
 - npm
 - Git
 
 Installation
 
-Clone the repository:
+1. Clone the repository
 
 git clone https://github.com/rafael-d-santos-dev/agendaflow-booking-platform.git
 
-Navigate to the project directory:
+2. Navigate to the project directory
 
 cd agendaflow-booking-platform
 
-Install dependencies:
+3. Install dependencies
 
 npm install
 
-Start the development server:
+4. Start the development server
 
 npm run dev
 
-Create a production build:
+5. Create a production build
 
 npm run build
 
-Run the TypeScript validation script:
+6. Run TypeScript validation
 
 npm run lint
 
-Note: In the current project configuration, the "lint" script runs TypeScript validation ("tsc --noEmit"). It is not a separate ESLint analysis.
+«Note: The current "lint" script runs TypeScript validation using "tsc --noEmit". A separate ESLint configuration is not currently included.»
 
 ---
 
@@ -247,7 +247,7 @@ The reported audit identified no Critical or High severity findings.
 
 A production bundle size optimization through route-based code splitting was identified as a future improvement.
 
-These results reflect the project's reported development-environment validation, not an independent third-party certification.
+«These results reflect the project's reported development-environment validation, not an independent third-party certification.»
 
 ---
 
@@ -273,7 +273,7 @@ Rafael Douglas
 
 Freelance Web Designer & Developer
 
-- GitHub: https://github.com/rafael-d-santos-dev
+- GitHub: "rafael-d-santos-dev" (https://github.com/rafael-d-santos-dev)
 
 ---
 
