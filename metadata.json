@@ -1,0 +1,6 @@
+{
+  "name": "AgendaFlow — Editorial Luxury Scheduling Platform",
+  "description": "Premium multi-industry appointment scheduling and business management SaaS platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
