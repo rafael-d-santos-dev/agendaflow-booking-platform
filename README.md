@@ -130,7 +130,7 @@ The design system is shared across the application while allowing each business 
 Project Architecture
 
 The codebase separates domain logic, persistence, routing, and interface components.
-
+'''text
 src/
 ├── components/
 │   ├── admin/
@@ -152,7 +152,7 @@ src/
 ├── types/
 │   └── index.ts
 └── App.tsx
-
+'''
 The structure above highlights the main architectural areas; supporting files and components are omitted.
 
 ---
