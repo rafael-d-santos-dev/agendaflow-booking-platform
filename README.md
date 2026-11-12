@@ -1,134 +1,97 @@
-AgendaFlow — Multi-Industry Booking Platform
+# AgendaFlow — Multi-Industry Booking Platform
 
-A modern, multi-industry appointment booking platform demo built with React, TypeScript, Vite, and Tailwind CSS.
+A multi-industry appointment booking platform demo built with **React, TypeScript, and Vite**.
 
-AgendaFlow demonstrates how a single application can support different business models through configurable booking rules, an interactive customer portal, and an integrated administrative dashboard.
+AgendaFlow is a portfolio project designed to demonstrate frontend engineering, interface design, scheduling logic, data management, and customer booking workflows across different business industries.
 
-«Project type: Portfolio project / Interactive demonstration
-Status: Ready for portfolio presentation
-Architecture: Frontend-only Single Page Application (SPA)»
+**Live Demo:** https://agendaflow-editorial-luxury-scheduling-platform.ai.studio
 
 ---
 
-Overview
+## Overview
 
-AgendaFlow was designed to demonstrate frontend engineering skills through a realistic appointment management experience.
+AgendaFlow provides two independent interfaces:
 
-Instead of building separate applications for different industries, the platform uses a shared architecture with business-specific configurations.
+- **Admin Dashboard:** Manage appointments, services, staff, customers, business settings, and scheduling operations.
+- **Customer Booking Portal:** A guided booking experience that allows customers to select services, staff, dates, and available time slots.
 
-It includes two independent interfaces:
+The platform includes five configurable business environments, each with its own data and operational settings.
 
-- Admin Dashboard: Manage appointments, services, staff, customers, business settings, and operational information.
-- Customer Booking Portal: A guided booking experience where customers select services, professionals or resources, dates, times, and provide their contact information.
+## Supported Industries
 
-Both interfaces share the same application state and locally persisted data.
+| Business | Industry |
+|---|---|
+| Atelier Grooming & Hair Spa | Salon & Beauty |
+| Aura Integrative Wellness | Wellness & Clinic |
+| Vanguard Strategic Advisory | Consulting |
+| Kinetic Performance Lab | Fitness |
+| Monolith Daylight Studios | Studio Rentals |
 
----
+All businesses and customer records are fictional demonstration data.
 
-Supported Business Industries
+## Key Features
 
-AgendaFlow includes five configurable business environments:
+### Customer Booking Portal
 
-Business| Industry| Key Booking Rules
-Atelier Grooming & Hair Spa| Salon & Grooming| Dedicated specialists and individual appointments
-Aura Integrative Wellness| Wellness Clinic| Qualified specialists and treatment rooms
-Vanguard Strategic Advisory| Consulting| Professional consultations and meeting durations
-Kinetic Performance Lab| Fitness| Group sessions and participant capacity
-Monolith Daylight Studios| Studio Rental| Resource-based space and equipment reservations
+- Seven-step guided booking workflow.
+- Business-specific services and staff.
+- Dynamic availability and time-slot selection.
+- Scheduling policy validation.
+- Booking confirmation with a unique reference code.
+- Customer information validation.
+- Prevention of duplicate customer records.
+- Booking cancellation and availability updates.
 
-Each business operates with its own services, staff, customers, appointments, resources, and booking configurations.
+### Admin Dashboard
 
----
+- Overview dashboard.
+- Calendar with day and week views.
+- Appointment management.
+- Service and pricing management.
+- Team and staff management.
+- Customer CRM.
+- Business settings and scheduling policies.
 
-Features
+### Scheduling & Data Integrity
 
-Customer Booking Portal
+- Business-specific data isolation.
+- Business operating hours and closures.
+- Staff availability and breaks.
+- Booking lead-time restrictions.
+- Service duration and buffer handling.
+- Resource and group-capacity validation.
+- Availability revalidation before booking confirmation.
+- Customer and appointment data persistence using browser localStorage.
 
-A guided seven-step booking workflow:
+## Technology Stack
 
-1. Service Selection — Browse available services and their details.
-2. Professional or Resource Selection — Choose a qualified specialist, available option, or required resource.
-3. Date Selection — Browse available booking dates.
-4. Time Selection — Choose dynamically generated available slots.
-5. Customer Details — Enter contact information with input validation.
-6. Booking Review — Review booking details and applicable policies.
-7. Confirmation Receipt — Receive a confirmation code and booking summary.
+| Technology | Purpose |
+|---|---|
+| React 19 | User interface |
+| TypeScript | Static typing |
+| Vite | Development and build tooling |
+| Tailwind CSS v4 | Styling |
+| Motion | Interface animations |
+| Lucide React | Icons |
+| Browser localStorage | Local data persistence |
 
-Admin Dashboard
+## Design System
 
-Seven integrated management modules:
+AgendaFlow uses an **Editorial Luxury** visual direction.
 
-- Overview: Operational metrics and business summary.
-- Live Calendar: Daily and weekly appointment visualization.
-- Appointments: Search, filtering, appointment management, and status updates.
-- Services & Pricing: Service catalog and pricing management.
-- Team Management: Specialist profiles, assignments, and availability schedules.
-- Customer CRM: Customer directory, contact management, and appointment history.
-- Business Settings: Business profile, operating hours, booking policies, closures, and resources.
+The interface combines:
 
-Availability Engine
+- Editorial typography using Playfair Display and Plus Jakarta Sans.
+- Warm ivory, sand, taupe, espresso, and restrained gold tones.
+- Spacious layouts and refined visual hierarchy.
+- Responsive layouts for mobile, tablet, and desktop.
+- Separate visual approaches for administrative operations and customer booking.
 
-A dedicated availability engine handles booking calculations and validation, including:
+## Project Architecture
 
-- Business operating hours.
-- Business timezone configuration.
-- Special closures and partial-day exceptions.
-- Specialist schedules and breaks.
-- Booking lead time and advance booking limits.
-- Appointment duration and buffer intervals.
-- Resource availability.
-- Group booking capacity.
-- Availability revalidation before booking persistence.
+The following is a simplified overview of the main source structure:
 
-Data Integrity
-
-The application includes:
-
-- Business-scoped data queries.
-- Customer contact collision prevention.
-- Appointment validation before persistence.
-- Historical service price snapshots.
-- Cancellation and availability updates.
-- Reactive synchronization between application views and browser tabs.
-
----
-
-Tech Stack
-
-Technology| Purpose
-React 19| Component-based UI
-TypeScript| Static typing and data modeling
-Vite| Development server and production build
-Tailwind CSS v4| Styling and responsive layouts
-Motion| UI animations
-Lucide React| Interface icons
-Browser localStorage| Local data persistence
-
-The application uses hash-based routing and a centralized storage layer.
-
----
-
-Design System
-
-AgendaFlow follows an Editorial Luxury visual direction inspired by premium hospitality and contemporary editorial design.
-
-Design characteristics:
-
-- Warm ivory and espresso color palette.
-- Subtle gold and terracotta accents.
-- Playfair Display and Plus Jakarta Sans typography.
-- Refined spacing and editorial layouts.
-- Responsive administrative and customer interfaces.
-- Accessible focus indicators and semantic UI elements.
-
-The design system is shared across the application while allowing each business context to display its own identity.
-
----
-
-Project Architecture
-
-The codebase separates domain logic, persistence, routing, and interface components.
-
+```text
 src/
 ├── components/
 │   ├── admin/
@@ -150,14 +113,13 @@ src/
 ├── types/
 │   └── index.ts
 └── App.tsx
+```
 
-This is a simplified overview of the main project structure. Supporting files and components are omitted.
+This tree highlights representative files and does not list every component or supporting file.
 
----
+## Getting Started
 
-Getting Started
-
-Prerequisites
+### Prerequisites
 
 Make sure you have the following installed:
 
@@ -165,116 +127,113 @@ Make sure you have the following installed:
 - npm
 - Git
 
-Installation
+### Installation
 
-1. Clone the repository
+1. Clone the repository:
 
+```bash
 git clone https://github.com/rafael-d-santos-dev/agendaflow-booking-platform.git
+```
 
-2. Navigate to the project directory
+2. Navigate to the project directory:
 
+```bash
 cd agendaflow-booking-platform
+```
 
-3. Install dependencies
+3. Install dependencies:
 
+```bash
 npm install
+```
 
-4. Start the development server
+4. Start the development server:
 
+```bash
 npm run dev
+```
 
-5. Create a production build
+5. Open the local URL provided by Vite in your browser.
 
+### Production Build
+
+To generate a production build:
+
+```bash
 npm run build
+```
 
-6. Run TypeScript validation
+### Type Checking
 
+Run the project's configured validation command:
+
+```bash
 npm run lint
+```
 
-«Note: The current "lint" script runs TypeScript validation using "tsc --noEmit". A separate ESLint configuration is not currently included.»
+**Note:** The current `lint` script runs TypeScript type checking (`tsc --noEmit`). It does not represent a separate ESLint analysis.
 
----
+## Data Persistence
 
-Demo Data and Persistence
-
-AgendaFlow uses fictional business information and demonstration records.
-
-Data is stored locally in the browser using "localStorage".
+AgendaFlow currently uses browser `localStorage` for demonstration purposes.
 
 This means:
 
-- Data persists in the same browser environment.
-- Different business contexts maintain separate records.
-- Application views synchronize through browser events.
-- Clearing browser storage can remove locally saved demonstration data.
+- Data is stored locally in the browser.
+- Different browsers and devices do not share data.
+- Clearing browser storage may remove saved demonstration data.
+- The application does not use a cloud database or remote persistence service.
 
-The application does not currently provide cloud persistence or synchronization across different devices.
+## Scope & Limitations
 
----
-
-Scope and Limitations
-
-AgendaFlow is an interactive frontend portfolio demonstration, not a production-ready commercial SaaS.
+AgendaFlow is a frontend portfolio demonstration, not a production-ready booking service.
 
 The current implementation does not include:
 
+- Backend infrastructure or API services.
 - Real user authentication or authorization.
-- Backend API or server-side database.
-- Cloud or multi-device synchronization.
-- Real payment processing.
-- Email, SMS, or push notification delivery.
-- Distributed transaction management or multi-user concurrency control.
+- Cloud database integration.
+- Online payments.
+- Real email or SMS notifications.
+- Push notifications.
+- Multi-device synchronization.
+- Production-grade server-side transaction handling.
 
-Booking confirmations are generated within the local demonstration environment. They do not represent external notifications or server-verified reservations.
+All business profiles, appointments, customers, and operational information are fictional.
 
----
+## Quality & Validation
 
-Quality and Validation
+The project development environment reported the following validation results:
 
-The final project audit reported the following results:
+- TypeScript checks: PASS.
+- Production build: PASS.
+- Automated test assertions: 66 reported.
+- Five business environments included in validation scenarios.
+- Booking availability revalidation and customer-data collision scenarios covered.
 
-Validation| Reported Result
-TypeScript validation| PASS
-Vite production build| PASS
-Booking workflow validation| PASS
-Multi-industry booking scenarios| PASS
-Availability and conflict validation| PASS
-CRM contact collision validation| PASS
-Browser-tab synchronization| PASS
-Responsive layout inspection| PASS
+These results reflect development-environment reports and are not an independent third-party certification or production security audit.
 
-The reported audit identified no Critical or High severity findings.
+## Project Goals
 
-A production bundle size optimization through route-based code splitting was identified as a future improvement.
+This project was developed to demonstrate practical skills in:
 
-«These results reflect the project's reported development-environment validation, not an independent third-party certification.»
-
----
-
-Project Goals
-
-AgendaFlow was developed to demonstrate practical frontend engineering capabilities, including:
-
-- Complex UI architecture.
-- TypeScript data modeling.
-- Reusable component design.
-- Multi-context application logic.
-- Booking and availability algorithms.
-- Form validation and data integrity.
+- React and TypeScript application architecture.
 - Responsive interface development.
+- Complex multi-step user workflows.
+- Scheduling and availability logic.
 - State management and browser persistence.
-- Consistent design system implementation.
+- Data validation and business-rule implementation.
+- Multi-industry product configuration.
+- UI/UX design and frontend quality practices.
 
----
+## Author
 
-Author
-
-Rafael Douglas
+**Rafael Douglas**
 
 Freelance Web Designer & Developer
 
-- GitHub: "rafael-d-santos-dev" (https://github.com/rafael-d-santos-dev)
+- GitHub: https://github.com/rafael-d-santos-dev
 
 ---
 
-AgendaFlow — A portfolio project exploring multi-industry booking workflows, frontend architecture, and editorial interface design.
+*AgendaFlow — A multi-industry booking platform demonstration built as part of a frontend development portfolio.*
